@@ -1,0 +1,93 @@
+{
+  "config": {
+    "title": "React Component Ts",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-",
+    "port": 3030
+  },
+  "entries": [
+    {
+      "key": "README.md",
+      "value": {
+        "id": "04c6e90faac2675aa89e2176d2eec7d8",
+        "filepath": "README.md",
+        "fullpath": "D:\\code\\react-component-ts\\README.md",
+        "link": "",
+        "hidden": false,
+        "slug": "readme",
+        "route": "/readme",
+        "name": "Readme",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "getting-started-with-create-react-app",
+            "depth": 1,
+            "value": "Getting Started with Create React App"
+          },
+          {
+            "slug": "available-scripts",
+            "depth": 2,
+            "value": "Available Scripts"
+          },
+          {
+            "slug": "npm-start",
+            "depth": 3,
+            "value": "npm start"
+          },
+          {
+            "slug": "npm-test",
+            "depth": 3,
+            "value": "npm test"
+          },
+          {
+            "slug": "npm-run-build",
+            "depth": 3,
+            "value": "npm run build"
+          },
+          {
+            "slug": "npm-run-eject",
+            "depth": 3,
+            "value": "npm run eject"
+          },
+          {
+            "slug": "learn-more",
+            "depth": 2,
+            "value": "Learn More"
+          }
+        ]
+      }
+    },
+    {
+      "key": "doc/Feedback.mdx",
+      "value": {
+        "name": "Hello world",
+        "id": "9b2c05377642e0e5fd4d476ba38db88a",
+        "filepath": "doc/Feedback.mdx",
+        "fullpath": "D:\\code\\react-component-ts\\doc\\Feedback.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "doc-feedback",
+        "route": "/doc-feedback",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "反馈组件-feedback",
+            "depth": 2,
+            "value": "反馈组件 Feedback"
+          },
+          {
+            "slug": "标题二",
+            "depth": 2,
+            "value": "标题二"
+          }
+        ]
+      }
+    }
+  ],
+  "props": []
+}
