@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+本项目用于 react typescript 学习，主要以一些 react [开源组件](https://github.com/react-component)的源码学习为主
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 项目脚本
 
-## Available Scripts
+### `npm run dev`
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+开发
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+打包
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run docz:dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+文档开发
 
-### `npm run eject`
+### `npm run docz:build`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+文档打包
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 项目计划
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- [https://github.com/react-component/m-feedback](https://github.com/react-component/m-feedback)
+- [https://github.com/react-component/m-dialog](https://github.com/react-component/m-dialog)
+- [https://github.com/react-component/m-tabs](https://github.com/react-component/m-tabs)
+- [https://github.com/react-component/m-pull-to-refresh](https://github.com/react-component/m-pull-to-refresh)
+- [https://github.com/react-component/m-calendar](https://github.com/react-component/m-calendar)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 参考文档
 
-## Learn More
+项目搭建工具：[Create React App](https://facebook.github.io/create-react-app/docs/getting-started).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+文档工具：[Docz](https://www.docz.site/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React TypeScript 学习手册：[React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
