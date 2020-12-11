@@ -2600,6 +2600,68 @@ function createElement (type, props) {
 
 /***/ }),
 
+/***/ "../node_modules/classnames/index.js":
+/*!*******************************************!*\
+  !*** ../node_modules/classnames/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "../node_modules/core-js/internals/a-function.js":
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/internals/a-function.js ***!
@@ -3965,7 +4027,7 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c1c2d7ab2a3e247608dc9fedcc2e9b35.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c1c2d7ab2a3e247608dc9fedcc2e9b35.js").default;
+var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d484a139ea18e1a5ac193df20e0b8a39.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d484a139ea18e1a5ac193df20e0b8a39.js").default;
 
 var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
 
@@ -5539,31 +5601,190 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
-/***/ "../src/components/Feedback/index.tsx":
-/*!********************************************!*\
-  !*** ../src/components/Feedback/index.tsx ***!
-  \********************************************/
+/***/ "../src/components/TouchFeedback/index.scss":
+/*!**************************************************!*\
+  !*** ../src/components/TouchFeedback/index.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "../src/components/TouchFeedback/index.tsx":
+/*!*************************************************!*\
+  !*** ../src/components/TouchFeedback/index.tsx ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Feedback; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TouchFeedback; });
+/* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "../node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "../node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "../node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
 
 
-function Feedback() {
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", null, "\u6587\u6863\u6D4B\u8BD5");
-}
 
-if (typeof Feedback !== 'undefined' && Feedback && Feedback === Object(Feedback) && Object.isExtensible(Feedback) && !Feedback.hasOwnProperty('__filemeta')) {
-  Object.defineProperty(Feedback, '__filemeta', {
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
+/*  
+    Basic Prop Types Examples
+    https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example#basic-prop-types-examples
+
+    Useful React Prop Type Examples
+    https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example#useful-react-prop-type-examples
+ */
+
+/* 
+    types or interfaces
+    https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example#types-or-interfaces
+ */
+var TouchFeedback = /*#__PURE__*/function (_React$Component) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(TouchFeedback, _React$Component);
+
+  function TouchFeedback() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.state = {
+      active: false
+    };
+
+    _this.onTouchStart = function (e) {
+      _this.triggerEvent('TouchStart', true, e);
+    };
+
+    _this.onTouchMove = function (e) {
+      _this.triggerEvent('TouchMove', false, e);
+    };
+
+    _this.onTouchEnd = function (e) {
+      _this.triggerEvent('TouchEnd', false, e);
+    };
+
+    _this.onTouchCancel = function (e) {
+      _this.triggerEvent('TouchCancel', false, e);
+    };
+
+    _this.onMouseDown = function (e) {
+      // pc模拟手机端
+      _this.triggerEvent('MouseDown', true, e);
+    };
+
+    _this.onMouseUp = function (e) {
+      _this.triggerEvent('MouseUp', false, e);
+    };
+
+    _this.onMouseLeave = function (e) {
+      _this.triggerEvent('MouseLeave', false, e);
+    };
+
+    return _this;
+  }
+
+  var _proto = TouchFeedback.prototype;
+
+  _proto.componentDidUpdate = function componentDidUpdate() {
+    if (this.props.disabled && this.state.active) {
+      this.setState({
+        active: false
+      });
+    }
+  };
+
+  _proto.triggerEvent = function triggerEvent(type, isActive, event) {
+    var eventType = "on" + type;
+    var children = this.props.children;
+
+    if (children.props[eventType]) {
+      children.props[eventType](event);
+    }
+
+    if (isActive !== this.state.active) {
+      this.setState({
+        active: isActive
+      });
+    }
+  };
+
+  _proto.render = function render() {
+    var _this$props = this.props,
+        children = _this$props.children,
+        disabled = _this$props.disabled,
+        activeClassName = _this$props.activeClassName,
+        activeStyle = _this$props.activeStyle;
+    var events = disabled ? undefined : {
+      onTouchStart: this.onTouchStart,
+      onTouchMove: this.onTouchMove,
+      onTouchEnd: this.onTouchEnd,
+      onTouchCancel: this.onTouchCancel,
+      onMouseDown: this.onMouseDown,
+      onMouseUp: this.onMouseUp,
+      onMouseLeave: this.onMouseLeave
+    };
+    var child = react__WEBPACK_IMPORTED_MODULE_2__["Children"].only(children); // https://zh-hans.reactjs.org/docs/react-api.html#reactchildrenonly
+
+    if (!disabled && this.state.active) {
+      var _child$props = child.props,
+          style = _child$props.style,
+          className = _child$props.className;
+
+      if (activeStyle !== false) {
+        if (activeStyle) {
+          style = _objectSpread(_objectSpread({}, style), activeStyle);
+        }
+
+        className = classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, activeClassName);
+      }
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](child, _objectSpread({
+        className: className,
+        style: style
+      }, events));
+    } // https://zh-hans.reactjs.org/docs/react-api.html#cloneelement
+
+
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__["cloneElement"](child, events);
+  };
+
+  return TouchFeedback;
+}(react__WEBPACK_IMPORTED_MODULE_2__["Component"]);
+
+TouchFeedback.defaultProps = {
+  disabled: false
+};
+
+
+if (typeof TouchFeedback !== 'undefined' && TouchFeedback && TouchFeedback === Object(TouchFeedback) && Object.isExtensible(TouchFeedback) && !TouchFeedback.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(TouchFeedback, '__filemeta', {
     configurable: true,
     value: {
-      name: "Feedback",
-      filename: "src/components/Feedback/index.tsx"
+      name: "TouchFeedback",
+      filename: "src/components/TouchFeedback/index.tsx"
+    }
+  });
+}
+
+if (typeof TouchFeedback !== 'undefined' && TouchFeedback && TouchFeedback === Object(TouchFeedback) && Object.isExtensible(TouchFeedback) && !TouchFeedback.hasOwnProperty('__filemeta')) {
+  Object.defineProperty(TouchFeedback, '__filemeta', {
+    configurable: true,
+    value: {
+      name: "TouchFeedback",
+      filename: "src/components/TouchFeedback/index.tsx"
     }
   });
 }
@@ -5866,23 +6087,26 @@ exports.wrapRootElement = true;
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c1c2d7ab2a3e247608dc9fedcc2e9b35.js":
+/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d484a139ea18e1a5ac193df20e0b8a39.js":
 /*!********************************************************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/c1c2d7ab2a3e247608dc9fedcc2e9b35.js ***!
+  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/d484a139ea18e1a5ac193df20e0b8a39.js ***!
   \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _src_components_Feedback__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/components/Feedback */ "../src/components/Feedback/index.tsx");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _src_components_TouchFeedback_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../src/components/TouchFeedback/index */ "../src/components/TouchFeedback/index.tsx");
+/* harmony import */ var _src_components_TouchFeedback_index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../../src/components/TouchFeedback/index.scss */ "../src/components/TouchFeedback/index.scss");
+/* harmony import */ var _src_components_TouchFeedback_index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_src_components_TouchFeedback_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  Feedback: _src_components_Feedback__WEBPACK_IMPORTED_MODULE_0__["default"],
-  React: react__WEBPACK_IMPORTED_MODULE_1__
+  TouchFeedback: _src_components_TouchFeedback_index__WEBPACK_IMPORTED_MODULE_0__["default"],
+  React: react__WEBPACK_IMPORTED_MODULE_2__
 });
 
 /***/ }),
@@ -5915,24 +6139,21 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return HTML; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
-
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _emotion_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/core */ "../node_modules/@emotion/core/dist/core.esm.js");
 
 
 function HTML(props) {
-  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("html", props.htmlAttributes, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("head", null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("meta", {
+  return Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("html", props.htmlAttributes, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("head", null, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("meta", {
     charSet: "utf-8"
-  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("meta", {
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("meta", {
     httpEquiv: "x-ua-compatible",
     content: "ie=edge"
-  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("meta", {
+  }), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1, shrink-to-fit=no"
-  }), props.headComponents), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("body", props.bodyAttributes, props.preBodyComponents, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_2__["jsx"])("div", {
+  }), props.headComponents), Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("body", props.bodyAttributes, props.preBodyComponents, Object(_emotion_core__WEBPACK_IMPORTED_MODULE_1__["jsx"])("div", {
     key: "body",
     id: "___gatsby",
     dangerouslySetInnerHTML: {
@@ -5941,12 +6162,12 @@ function HTML(props) {
   }), props.postBodyComponents));
 }
 HTML.propTypes = {
-  htmlAttributes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  headComponents: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
-  bodyAttributes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  preBodyComponents: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
-  body: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  postBodyComponents: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array
+  htmlAttributes: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object,
+  headComponents: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.array,
+  bodyAttributes: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.object,
+  preBodyComponents: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.array,
+  body: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
+  postBodyComponents: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.array
 };
 
 /***/ }),

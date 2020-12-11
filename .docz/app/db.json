@@ -8,7 +8,8 @@
     "native": false,
     "themeConfig": {},
     "separator": "-",
-    "port": 3030
+    "port": 3030,
+    "typescript": true
   },
   "entries": [
     {
@@ -25,24 +26,14 @@
         "menu": "",
         "headings": [
           {
-            "slug": "getting-started-with-create-react-app",
-            "depth": 1,
-            "value": "Getting Started with Create React App"
-          },
-          {
-            "slug": "available-scripts",
+            "slug": "项目脚本",
             "depth": 2,
-            "value": "Available Scripts"
+            "value": "项目脚本"
           },
           {
-            "slug": "npm-start",
+            "slug": "npm-run-dev",
             "depth": 3,
-            "value": "npm start"
-          },
-          {
-            "slug": "npm-test",
-            "depth": 3,
-            "value": "npm test"
+            "value": "npm run dev"
           },
           {
             "slug": "npm-run-build",
@@ -50,44 +41,102 @@
             "value": "npm run build"
           },
           {
-            "slug": "npm-run-eject",
+            "slug": "npm-run-doczdev",
             "depth": 3,
-            "value": "npm run eject"
+            "value": "npm run docz:dev"
           },
           {
-            "slug": "learn-more",
+            "slug": "npm-run-doczbuild",
+            "depth": 3,
+            "value": "npm run docz:build"
+          },
+          {
+            "slug": "项目计划",
             "depth": 2,
-            "value": "Learn More"
+            "value": "项目计划"
+          },
+          {
+            "slug": "参考文档",
+            "depth": 2,
+            "value": "参考文档"
           }
         ]
       }
     },
     {
-      "key": "doc/Feedback.mdx",
+      "key": "src/components/TouchFeedback/TouchFeedback.mdx",
       "value": {
-        "name": "Hello world",
-        "id": "9b2c05377642e0e5fd4d476ba38db88a",
-        "filepath": "doc/Feedback.mdx",
-        "fullpath": "D:\\code\\react-component-ts\\doc\\Feedback.mdx",
+        "name": "TouchFeedback",
+        "route": "/touchFeedback",
+        "id": "6d555dc6e0a02c1dcd27c1f3b01a1d70",
+        "filepath": "src/components/TouchFeedback/TouchFeedback.mdx",
+        "fullpath": "D:\\code\\react-component-ts\\src\\components\\TouchFeedback\\TouchFeedback.mdx",
         "link": "",
         "hidden": false,
-        "slug": "doc-feedback",
-        "route": "/doc-feedback",
+        "slug": "src-components-touch-feedback-touch-feedback",
         "menu": "",
         "headings": [
           {
-            "slug": "反馈组件-feedback",
-            "depth": 2,
-            "value": "反馈组件 Feedback"
+            "slug": "使用activestyle",
+            "depth": 3,
+            "value": "使用 activeStyle"
           },
           {
-            "slug": "标题二",
-            "depth": 2,
-            "value": "标题二"
+            "slug": "使用activeclassname",
+            "depth": 3,
+            "value": "使用 activeClassName"
           }
         ]
       }
     }
   ],
-  "props": []
+  "props": [
+    {
+      "key": "src/App.tsx",
+      "value": []
+    },
+    {
+      "key": "src/index.tsx",
+      "value": []
+    },
+    {
+      "key": "src/components/TouchFeedback/index.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TouchFeedback",
+          "methods": [],
+          "props": {
+            "disabled": {
+              "defaultValue": null,
+              "description": "",
+              "name": "disabled",
+              "required": false,
+              "type": {
+                "name": "boolean | undefined"
+              }
+            },
+            "activeClassName": {
+              "defaultValue": null,
+              "description": "",
+              "name": "activeClassName",
+              "required": false,
+              "type": {
+                "name": "string | undefined"
+              }
+            },
+            "activeStyle": {
+              "defaultValue": null,
+              "description": "",
+              "name": "activeStyle",
+              "required": false,
+              "type": {
+                "name": "CSSProperties | undefined"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

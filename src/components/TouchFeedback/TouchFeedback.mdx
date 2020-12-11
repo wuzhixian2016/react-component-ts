@@ -1,0 +1,19 @@
+---
+name: TouchFeedback
+route: /touchFeedback
+---
+
+import TouchFeedback from "./index";
+import './index.scss';
+
+### 使用`activeStyle`
+
+<TouchFeedback activeStyle={{opacity: 0.6}}>
+  <div style={{width: 200, height: 30, lineHeight: '30px'}}>点击会有反馈</div>
+</TouchFeedback>
+
+### 使用`activeClassName`
+
+<TouchFeedback activeClassName="touch-active">
+  <div style={{width: 200, height: 30, lineHeight: '30px'}}>点击会有反馈</div>
+</TouchFeedback>
